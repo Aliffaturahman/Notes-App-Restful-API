@@ -132,12 +132,13 @@ class AddNotes extends HTMLElement {
     setTimeout(() => {
       animate(
         ".addnotes-bar",
-        { x: [0, -200, 200, 0] },
+        { rotate: [0, 1.5, 0] },
         {
-          duration: 5,
-          offset: [0, 0.25, 0.75]
+            duration: 2,
+            easing: "ease-in-out",
+            repeat: 3
         }
-      );
+      )
     }, 3000);
 
   }
