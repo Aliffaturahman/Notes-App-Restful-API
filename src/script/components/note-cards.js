@@ -44,14 +44,12 @@ class NoteCards extends HTMLElement {
 
         animate(
             ".card",
-            { rotate: 0.5 },
+            { x: [0, -50, 50, 0] },
             {
-              duration: 2,
-              easing: "ease-in-out",
-              repeat: 5,
-              direction: "alternate"
+                duration: 5,
+                offset: [0, 0.25, 0.75]
             }
-          )
+        );
     }
 }
 customElements.define('note-cards', NoteCards);
