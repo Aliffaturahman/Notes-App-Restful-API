@@ -42,14 +42,16 @@ class NoteCards extends HTMLElement {
         styleElement.textContent = wrapStyles;
         document.head.appendChild(styleElement);
 
-        animate(
-            ".card",
-            { x: [0, -50, 50, 0] },
-            {
-                duration: 5,
-                offset: [0, 0.25, 0.75]
-            }
-        );
+        setTimeout(() => {
+            animate(
+                ".card",
+                { x: [0, -50, 50, 0] },
+                {
+                    duration: 5,
+                    offset: [0, 0.25, 0.75]
+                }
+            );
+        }, 3000);
     }
 }
 customElements.define('note-cards', NoteCards);
